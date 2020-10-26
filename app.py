@@ -10,12 +10,20 @@ def suma():
 
 	if request.method == 'POST':
 
+		response = {}
+
 		a = request.form.get('a')
 		b = request.form.get('b')
 
 		resultado = float(a) + float(b)
 
-		return str(resultado)
+		response["fecha"] = datetime.now()
+		response["a"] = a
+		response["b"] = b
+		response["tipoOperación"] = "suma"
+		response["respuesta"] = str(resultado)
+
+		return response
 
 	
 
@@ -24,12 +32,20 @@ def resta():
 
 	if request.method == 'POST':
 
+		response = {}
+
 		a = request.form.get('a')
 		b = request.form.get('b')
 
 		resultado = float(a) - float(b)
 
-		return str(resultado)
+		response["fecha"] = datetime.now()
+		response["a"] = a
+		response["b"] = b
+		response["tipoOperación"] = "resta"
+		response["respuesta"] = str(resultado)
+
+		return response
 
 
 
@@ -38,12 +54,20 @@ def multiplicacion():
 
 	if request.method == 'POST':
 
+		response = {}
+
 		a = request.form.get('a')
 		b = request.form.get('b')
 
 		resultado = float(a) * float(b)
 
-		return str(resultado)
+		response["fecha"] = datetime.now()
+		response["a"] = a
+		response["b"] = b
+		response["tipoOperación"] = "multiplicación"
+		response["respuesta"] = str(resultado)
+
+		return response
 
 
 
@@ -53,18 +77,28 @@ def division():
 	
 	if request.method == 'POST':
 
+		response = {}
+
 		a = request.form.get('a')
 		b = request.form.get('b')
 
 		resultado = float(a) / float(b)
 
-		return str(resultado)
+		response["fecha"] = datetime.now()
+		response["a"] = a
+		response["b"] = b
+		response["tipoOperación"] = "división"
+		response["respuesta"] = str(resultado)
+
+		return response
 
 
 @app.route('/potencia', methods=['POST'])
 def potencia():	
 
 	if request.method == 'POST':
+
+		response = {}
 
 		a = request.form.get('a')
 		b = request.form.get('b')
@@ -74,6 +108,12 @@ def potencia():
 
 		resultado = pow(var_a,var_b)
 
+		response["fecha"] = datetime.now()
+		response["a"] = a
+		response["b"] = b
+		response["tipoOperación"] = "potencia"
+		response["respuesta"] = str(resultado)
+
 		return str(resultado)
 
 
@@ -82,6 +122,8 @@ def raiz():
 	
 	if request.method == 'POST':
 
+		response = {}
+
 		a = request.form.get('a')
 		b = request.form.get('b')
 
@@ -89,6 +131,12 @@ def raiz():
 		var_b = float(b)
 
 		resultado = float(var_b)**(1/float(var_a))
+
+		response["fecha"] = datetime.now()
+		response["a"] = a
+		response["b"] = b
+		response["tipoOperación"] = "raíz"
+		response["respuesta"] = str(resultado)
 
 		return str(resultado)
 
