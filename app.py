@@ -25,7 +25,6 @@ def suma():
 
 		return response
 
-	
 
 @app.route('/resta', methods=['POST'])
 def resta():
@@ -68,8 +67,6 @@ def multiplicacion():
 		response["5.respuesta"] = str(resultado)
 
 		return response
-
-
 
 
 @app.route('/division', methods=['POST'])
