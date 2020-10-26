@@ -17,11 +17,11 @@ def suma():
 
 		resultado = float(a) + float(b)
 
-		response["fecha"] = datetime.now()
-		response["a"] = a
-		response["b"] = b
-		response["tipoOperación"] = "suma"
-		response["respuesta"] = str(resultado)
+		response["1.fecha"] = datetime.now()
+		response["2.a"] = a
+		response["3.b"] = b
+		response["4.tipoOperación"] = "suma"
+		response["5.respuesta"] = str(resultado)
 
 		return response
 
@@ -39,11 +39,11 @@ def resta():
 
 		resultado = float(a) - float(b)
 
-		response["fecha"] = datetime.now()
-		response["a"] = a
-		response["b"] = b
-		response["tipoOperación"] = "resta"
-		response["respuesta"] = str(resultado)
+		response["1.fecha"] = datetime.now()
+		response["2.a"] = a
+		response["3.b"] = b
+		response["4.tipoOperación"] = "resta"
+		response["5.respuesta"] = str(resultado)
 
 		return response
 
@@ -61,11 +61,11 @@ def multiplicacion():
 
 		resultado = float(a) * float(b)
 
-		response["fecha"] = datetime.now()
-		response["a"] = a
-		response["b"] = b
-		response["tipoOperación"] = "multiplicación"
-		response["respuesta"] = str(resultado)
+		response["1.fecha"] = datetime.now()
+		response["2.a"] = a
+		response["3.b"] = b
+		response["4.tipoOperación"] = "multiplicación"
+		response["5.respuesta"] = str(resultado)
 
 		return response
 
@@ -84,11 +84,11 @@ def division():
 
 		resultado = float(a) / float(b)
 
-		response["fecha"] = datetime.now()
-		response["a"] = a
-		response["b"] = b
-		response["tipoOperación"] = "división"
-		response["respuesta"] = str(resultado)
+		response["1.fecha"] = datetime.now()
+		response["2.a"] = a
+		response["3.b"] = b
+		response["4.tipoOperación"] = "división"
+		response["5.respuesta"] = str(resultado)
 
 		return response
 
@@ -108,13 +108,13 @@ def potencia():
 
 		resultado = pow(var_a,var_b)
 
-		response["fecha"] = datetime.now()
-		response["a"] = a
-		response["b"] = b
-		response["tipoOperación"] = "potencia"
-		response["respuesta"] = str(resultado)
+		response["1.fecha"] = datetime.now()
+		response["2.a"] = a
+		response["3.b"] = b
+		response["4.tipoOperación"] = "potencia"
+		response["5.respuesta"] = str(resultado)
 
-		return str(resultado)
+		return response
 
 
 @app.route('/raiz', methods=['POST'])
@@ -132,13 +132,13 @@ def raiz():
 
 		resultado = float(var_b)**(1/float(var_a))
 
-		response["fecha"] = datetime.now()
-		response["a"] = a
-		response["b"] = b
-		response["tipoOperación"] = "raíz"
-		response["respuesta"] = str(resultado)
+		response["1.fecha"] = datetime.now()
+		response["2.a"] = a
+		response["3.b"] = b
+		response["4.tipoOperación"] = "raíz"
+		response["5.respuesta"] = str(resultado)
 
-		return str(resultado)
+		return response
 
 @app.route('/historial', methods=['GET'])
 def historial():
