@@ -12,7 +12,7 @@ def suma():
 		a = request.form.get('a')
 		b = request.form.get('b')
 
-		resultado = a + b
+		resultado = float(a) + float(b)
 
 		return resultado
 
