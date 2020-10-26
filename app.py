@@ -14,7 +14,7 @@ def suma():
 
 		resultado = float(a) + float(b)
 
-		return resultado
+		return str(resultado)
 
 	
 
@@ -28,7 +28,7 @@ def resta():
 
 		resultado = float(a) - float(b)
 
-		return resultado
+		return str(resultado)
 
 
 
