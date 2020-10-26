@@ -18,12 +18,17 @@ def suma():
 
 	
 
-@app.route('/resta', methods=['POST', 'GET'])
+@app.route('/resta', methods=['POST'])
 def resta():
 
 	if request.method == 'POST':
 
-		return "TRue"
+		a = request.form.get('a')
+		b = request.form.get('b')
+
+		resultado = float(a) - float(b)
+
+		return resultado
 
 
 
