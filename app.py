@@ -4,12 +4,17 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/suma', methods=['GET'])
+@app.route('/suma', methods=['POST'])
 def suma():
 
-	if request.method == 'GET':
+	if request.method == 'POST':
 
-		return "resultado"
+		a = request.form.get('a')
+		b = request.form.get('b')
+
+		resultado = a + b
+
+		return resultado
 
 	
 
